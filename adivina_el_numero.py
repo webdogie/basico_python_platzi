@@ -1,29 +1,9 @@
 import random
-
-def ask_number(text):
-    user_input = input(text)
-    user_input_check = user_input_type_check(user_input)
-        
-    # while not user_input_check:
-    if user_input_check:
-        user_input_as_number = int(user_input)
-        return int(user_input_as_number)
-    else:
-        print('Porfavor ingresa un tipo valido de dato\n')  
-        return ask_number(text)  
-
-    
-
-def user_input_type_check(user_input):
-    try: 
-        int(user_input)
-        return True
-    except:
-        return False
+import sanitise_user_input as sanitise
 
 def game_loop(random_num):
 
-    user_input = ask_number("Adivina el numero! --> ")
+    user_input = sanitise.ask_number("Adivina el numero! --> ")
 
     if random_num == user_input:
         return True
@@ -38,7 +18,7 @@ def game_loop(random_num):
 
 def run():
     while True:
-        lifes = ask_number("Ingresa el numero de intentos quieres tener para adivinar --> ")
+        lifes = sanitise.ask_number("Ingresa el numero de intentos quieres tener para adivinar --> ", "Porfavor ingresa un tipo valido de dato\n")
         
         rand_number = random.randint(1, 100)
 
