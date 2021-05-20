@@ -1,5 +1,5 @@
 def run():
-  print("Bienvenido al juego piedra, papel o tijera!")
+  print("Bienvenido al juego piedra, papel o tijera!\n\nIngresa lo siguiente: piedra | papel | tijera\n")
   player1 = input("Jugador 1 ingresa tu eleecion\n--> ")
   player2 = input("Jugador 2 ingresa tu eleecion\n--> ")
 
