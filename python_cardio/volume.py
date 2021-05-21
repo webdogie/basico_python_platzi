@@ -13,7 +13,9 @@ def run():
         radius = float(input("Ingresa el radio del cilindro\n--> "))
         height = float(input("Ingresa la altura del cilindro\n--> "))
 
-        volume = calc_vol((radius**2) * math.pi, height)
+        area = (radius**2) * math.pi
+
+        volume = calc_vol(area, height)
 
         print(f"El volumen es: {volume}cm")
 
@@ -21,7 +23,9 @@ def run():
         height = float(input("Ingresa la altura del cono\n--> "))
         radius = float(input("Ingresa el radio de la base del cono\n--> "))
 
-        volume = calc_vol((radius**2) * math.pi, height) / 3
+        area = (radius**2) * math.pi
+
+        volume = calc_vol(area, height) / 3
 
         print(f"El volumen es: {volume}cm")
 

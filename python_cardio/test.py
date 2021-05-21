@@ -10,9 +10,10 @@ def run():
     while game_state[0] < 3 or game_state[1] < 3:
         player1 = input("Jugador 1 ingresa tu eleecion\n--> ")
         player2 = input("Jugador 2 ingresa tu eleecion\n--> ")
-
+        
         if (player1 == rock and player2 == scissor) or (player1 == paper and player2 == rock) or (player1 == scissor and player2 == paper):
-            if game_state[0] == 3:
+
+            if game_state[0] >= 3:
                 print("------------------------\n-----Jugador 1 Gana!----\n------------------------\n")
                 return
 
@@ -24,7 +25,7 @@ def run():
             print("----------------\n-----EMPATE-----\n----------------\n")                            
             print("----------\nNingun jugador obtiene punto\n----------\n")                            
         else:
-            if game_state[1] == 3:
+            if game_state[1] >= 3:
                 print("------------------------\n-----Jugador 2 Gana!----\n------------------------\n")
                 return
 
